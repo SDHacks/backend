@@ -57,7 +57,7 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
   
-  config.action_mailer.default_url_options = { :host => 'smtp.sendgrid.net'} 
+  config.action_mailer.default_url_options = { :host => 'smtp.sendgrid.net' } 
   
   # Precompile additional assets. 
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
@@ -77,7 +77,7 @@ Rails.application.configure do
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
 
-  # Use default logging formatter so that PID and timestamp are not suppressed.
+  # Use default logging formatter so that PID and timestamp are not suppressed
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
