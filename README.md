@@ -1,38 +1,28 @@
-Uses:
-    django version 1.6.5
-    python 2.7.5
-    MySQL
+== README
 
-## Getting the Django project up and running for development
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-### Python
+Things you may want to cover:
 
-Python 2.7 needs to be installed on your machine. Also, you'll need to install the
-required Python packages:
+* Ruby version
 
-pip install -r requirements.txt
+* System dependencies
 
-It's recommended that you do this in a virtualenv
-(http://virtualenv.readthedocs.org/en/latest/virtualenv.html) to keep your global
-Python install clean.
+* Configuration
 
-### MySQL
+* Database creation
 
-You'll need to have a MySQL server running on your machine. Homebrew is an easy
-way to get this installed:
+* Database initialization
 
-brew install mysql
+* How to run the test suite
 
-You'll also need to create an "sdhacks" database in MySQL:
+* Services (job queues, cache servers, search engines, etc.)
 
-CREATE DATABASE sdhacks;
+* Deployment instructions
 
-Finally, all of the necessary tables need to be created in the database.
+* ...
 
-cd SDHacks/backend/sdhacks
-python manage.py syncdb
 
-### Running the Django development server
-
-cd SDHacks/backend/sdhacks
-python manage.py runserver
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
