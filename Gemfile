@@ -31,7 +31,6 @@ gem 'spring',        group: :development
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'ransack'
-gem 'meta_search'
 
 # gem 'bcrypt', '~> 3.1.7'
 

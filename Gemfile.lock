@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 40ac6655d67eece5f43f72ff6137db1ba34aa711
+  revision: 708e59018cdec2a078a173da0dbc0b732b3a9399
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -91,11 +91,6 @@ GEM
       activesupport (>= 3.0.0)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
-    meta_search (0.5.4)
-      actionpack (>= 3.0.0.beta4)
-      activerecord (>= 3.0.0.beta4)
-      activesupport (>= 3.0.0.beta4)
-      arel (>= 0.4.0)
     mime-types (2.3)
     minitest (5.4.1)
     multi_json (1.10.1)
@@ -173,7 +168,6 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
-  meta_search
   mysql2
   rails (= 4.1.6)
   ransack
