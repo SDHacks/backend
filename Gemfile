@@ -37,3 +37,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Active Admin to manage database
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise', '~> 3.3.0'
