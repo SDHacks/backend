@@ -6,6 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+config.to_prepare do
+  Devise::SessionsController.skip_before_filter :authenticate_user!
+  UsersController.skip_before_filter :authenticate_user!
+end
+
 module Backend
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
