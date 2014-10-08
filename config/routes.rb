@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :hackers, :controllers => {:registrations => "hacker/registrations"} do
+    get   "hacker/sign_up" => "hacker/registrations#new", :as => :hacker_signup
+  end
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
