@@ -26,13 +26,13 @@ class Hackers::HackersController < ApplicationController
 
   # POST /hacker/resume
   def upload_resume
-    resume = params[:resume].read
+    resume = params[:resume]
 
     if resume.nil?
       return render json: {success: false, message: "Resume failed to upload"}
     end
 
-    @hacker.resume = resume
+    @hacker.resume = resume.read
     @hacker.save
 
     return render json: {success: true, message: "Resume uploaded succsessfully"}
