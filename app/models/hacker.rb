@@ -16,10 +16,11 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  authentication_token   :string(255)
-#  resume                 :binary(16777215)
 #
 
 class Hacker < ActiveRecord::Base
+  has_one :resume
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

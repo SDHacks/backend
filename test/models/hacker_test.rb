@@ -16,7 +16,6 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  authentication_token   :string(255)
-#  resume                 :binary(16777215)
 #
 
 require 'test_helper'

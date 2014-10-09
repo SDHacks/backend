@@ -21,7 +21,7 @@ class Hackers::HackersController < ApplicationController
       return render json: {success: false, message: "Resume not uploaded yet"}
     end
 
-    send_data resume, filename: "resume.pdf", type: "pdf", disposition: 'attachment'
+    send_data resume[:resume], filename: "resume.pdf", type: "pdf", disposition: 'attachment'
   end
 
   # POST /hacker/resume
@@ -31,8 +31,16 @@ class Hackers::HackersController < ApplicationController
     if resume.nil?
       return render json: {success: false, message: "Resume failed to upload"}
     end
+    
+    resume_content = resume.read
+    resume_old = @hacker.resume
 
-    @hacker.resume = resume.read
+    if resume_old.nil?
+      @hacker.build_resume(resume: resume_content)
+    else
+      resume_old.resume = resume_content
+      resume_old.save
+    end
     @hacker.save
 
     return render json: {success: true, message: "Resume uploaded succsessfully"}
