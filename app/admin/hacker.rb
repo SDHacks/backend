@@ -9,7 +9,13 @@ ActiveAdmin.register Hacker do
     column :sign_in_count
     column :created_at
     column :authentication_token
-    column :resume
+    column "Resume" do |resume|
+      result = ""
+      if !resume.nil?
+        result = "+"
+      end
+      result
+    end
     actions
   end
 
