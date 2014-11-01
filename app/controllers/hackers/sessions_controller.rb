@@ -1,6 +1,6 @@
 class Hackers::SessionsController < Devise::SessionsController
   skip_before_filter :verify_authenticity_token
-  prepend_before_filter :require_no_authentication, :only => [:create ]
+  prepend_before_filter :require_no_authentication, :only => [:create]
   before_filter :ensure_params_exist
 
   respond_to :json
@@ -11,6 +11,8 @@ class Hackers::SessionsController < Devise::SessionsController
   # time out after a certain time
 
   # POST /resource/sign_in
+  # Post a form with a login and password plaintext parameters
+  # { "login": "[login here]", "password": "[password here]" }
   def create
     resource = Hacker.find_for_database_authentication(
       :email => params[:login]
@@ -25,8 +27,9 @@ class Hackers::SessionsController < Devise::SessionsController
   end
 
   # DELETE /resource/sign_out
+  # Currently there is no mechanism to delete tokens
+  # And I believe it is not needed for now
   def destroy
-
   end
 
   protected
